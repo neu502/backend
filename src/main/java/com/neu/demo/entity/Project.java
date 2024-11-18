@@ -1,6 +1,6 @@
 package com.neu.demo.entity;
 
-public class project {
+public class Project {
     int projectId;
     String projectName;
     String projectInfo;
@@ -9,7 +9,7 @@ public class project {
     String status;
     int step;
 
-    public project() {
+    public Project() {
     }
 
     public int getProjectId() {
@@ -60,6 +60,7 @@ public class project {
         this.status = status;
     }
 
+    //根据step字段计算评估进度
     public int getStep() {
         return step;
     }
