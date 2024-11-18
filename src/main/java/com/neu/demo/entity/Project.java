@@ -60,6 +60,7 @@ public class Project {
         this.status = status;
     }
 
+    //根据step字段计算评估进度
     public int getStep() {
         return step;
     }
