@@ -3,23 +3,14 @@ package com.neu.demo.controller;
 import com.neu.demo.biz.ProjectBiz;
 import com.neu.demo.entity.Project;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-=======
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import java.util.HashMap;
 import java.util.List;
->>>>>>> origin/main
 import java.util.Map;
 
 @RestController
 @RequestMapping("/project")
 public class ProjectController {
-<<<<<<< HEAD
 
     @Autowired
     private ProjectBiz biz;
@@ -39,11 +30,6 @@ public class ProjectController {
         }
         return result;
     }
-
-=======
-    @Autowired
-    private ProjectBiz biz;
-    //查询某个公司
     @RequestMapping("/findProject")
     public Map findProject(String projectName){
         List<Project> project = this.biz.findProject(projectName);
@@ -53,5 +39,5 @@ public class ProjectController {
         res.put("project",project);
         return res;
     }
->>>>>>> origin/main
+
 }
