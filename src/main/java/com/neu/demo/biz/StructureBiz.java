@@ -1,6 +1,5 @@
 package com.neu.demo.biz;
 
-import com.neu.demo.entity.Project;
 import com.neu.demo.mapper.StructureMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
