@@ -12,7 +12,7 @@ public class StructureBiz {
     @Autowired
     private StructureMapper mapper;
 
-    public List<Map<String, Object>> getModulesByProjectId(int project_id) {
-        return this.mapper.getModulesByProjectId(project_id);
+    public List<Map<String, Object>> getModulesByProjectId(int projectId) {
+        return this.mapper.getModulesByProjectId(projectId);
     }
 }
