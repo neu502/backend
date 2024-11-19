@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Mapper
 public interface StructureMapper {
-    @Select("SELECT module_name, dfp FROM t_structure WHERE project_id = #{projectId}")
+    @Select("SELECT module_name, ufp FROM t_structure WHERE project_id = #{projectId}")
     List<Map<String, Object>> getModulesByProjectId(int projectId);
 }
 
