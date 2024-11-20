@@ -8,8 +8,10 @@ public class Project {
     String ddl;
     String company;
     String status;
+
     String auditStatus;
     String auditSuggest;
+
     int step;
     double ufp_num;
     double dfp_num;
@@ -20,13 +22,6 @@ public class Project {
     int ilf_num;
     int elf_num;
 
-    public String getBegin() {
-        return begin;
-    }
-
-    public void setBegin(String begin) {
-        this.begin = begin;
-    }
     public String getAuditStatus() {
         return auditStatus;
     }
@@ -140,6 +135,14 @@ public class Project {
 
     public void setEo_num(int eo_num) {
         this.eo_num = eo_num;
+    }
+
+    public String getBegin() {
+        return begin;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
     }
 
     public int getEq_num() {
