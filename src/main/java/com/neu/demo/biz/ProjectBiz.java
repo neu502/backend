@@ -17,8 +17,11 @@ public class ProjectBiz {
 
     }
 
-    public List<Project> findProject(String projectName) {
+    public Project findProjectByName(String projectName) {
         return this.mapper.selectProjectByProjectName(projectName);
     }
 
+    public void setMapper(ProjectMapper mapper) {
+        this.mapper = mapper;
+    }
 }

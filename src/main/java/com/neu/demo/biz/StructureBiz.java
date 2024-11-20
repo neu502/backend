@@ -16,4 +16,8 @@ public class StructureBiz {
     public List<Map<String, Object>> getModulesByProjectId(int project_id) {
         return this.mapper.getModulesByProjectId(project_id);
     }
+
+    public void setMapper(StructureMapper mapper) {
+        this.mapper = mapper;
+    }
 }

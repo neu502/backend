@@ -7,6 +7,7 @@ public class Project {
     String ddl;
     String company;
     String status;
+    String begin;
     int step;
     double ufp_num;
     double dfp_num;
@@ -114,6 +115,14 @@ public class Project {
 
     public void setEo_num(int eo_num) {
         this.eo_num = eo_num;
+    }
+
+    public String getBegin() {
+        return begin;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
     }
 
     public int getEq_num() {

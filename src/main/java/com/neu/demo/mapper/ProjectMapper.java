@@ -10,7 +10,7 @@ public interface ProjectMapper {
     @Select("SELECT * FROM t_project WHERE project_id=#{projectId}")
     Project selectProjectById(int projectId);
 
-    @Select("select * from t_project")
-    List<Project> selectProjectByProjectName(String projectName);
+    @Select("select * from t_project where project_name=#{projectName}")
+    Project selectProjectByProjectName(String projectName);
 
 }
