@@ -18,7 +18,6 @@ public class ProjectController {
     //根据项目id得到项目所有信息
     @GetMapping("/getall")
     public Map<String, Object> findProjectById(@RequestParam String projectId) {
-        System.out.println(projectId);
         Map<String, Object> result = new HashMap<>();
         Project project = biz.selectProjectById(projectId);
         if (project != null) {
@@ -52,14 +51,16 @@ public class ProjectController {
         res.put("projects", list);
         return res;
     }
-    @PostMapping("/auditProject")
-    public Map auditProject(Project project) {
-        System.out.println("Received project: " + project.getProject_id());
-        Map<String, Object> res = new HashMap<>();
-        if (this.biz.auditProject(project)){
-            res.put("isOk", true);
-        }
-        return res;
+    @RequestMapping("/auditProject")
+    public Map auditProject(String project_id,String auditStatus,String auditSuggest){
+        Project project = new Project();
+        project.setProject_id(project_id);
+        project.setAuditStatus(auditStatus);
+        project.setAuditSuggest(auditSuggest);
+        this.biz.auditProject(project);
+        Map res = new HashMap();
+        res.put("isOk",true);
+        return  res;
     }
 
 }
