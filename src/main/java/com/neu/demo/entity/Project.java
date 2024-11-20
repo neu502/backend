@@ -4,10 +4,16 @@ public class Project {
     String project_id;
     String project_name;
     String project_info;
+    String begin;
     String ddl;
     String company;
     String status;
+<<<<<<< HEAD
     String begin;
+=======
+    String auditStatus;
+    String auditSuggest;
+>>>>>>> 4141cb604101d3c7e96a66696b9c9e10931d0c48
     int step;
     double ufp_num;
     double dfp_num;
@@ -17,6 +23,29 @@ public class Project {
     int eq_num;
     int ilf_num;
     int elf_num;
+
+    public String getBegin() {
+        return begin;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
+    }
+    public String getAuditStatus() {
+        return auditStatus;
+    }
+
+    public void setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+    }
+
+    public String getAuditSuggest() {
+        return auditSuggest;
+    }
+
+    public void setAuditSuggest(String auditSuggest) {
+        this.auditSuggest = auditSuggest;
+    }
 
     public Project() {
     }
