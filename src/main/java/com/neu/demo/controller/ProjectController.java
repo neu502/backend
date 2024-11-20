@@ -42,11 +42,13 @@ public class ProjectController {
     }
     @RequestMapping("/findAllProject")
     public Map findAllProject(){
+        System.out.println("查找开始");
         List<Project> list = this.biz.findAllProject();
+        System.out.println("查找成功");
         Map res = new HashMap();
         res.put("isOk", true);
         res.put("msg", "查询成功");
-        res.put("users", list);
+        res.put("projects", list);
         return res;
     }
     @RequestMapping("/auditProject")
