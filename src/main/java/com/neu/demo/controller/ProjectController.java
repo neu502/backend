@@ -34,6 +34,19 @@ public class ProjectController {
         }
         return result;
     }
+
+
+    //获取所有项目
+    @RequestMapping("/selectAllProjects")
+    public Map findProjects(){
+        List<Project> list = biz.selectProjects();
+        Map res = new HashMap<>();
+        res.put("isOK",true);
+        res.put("msg","查询所有项目信息成功");
+        res.put("projects",list);
+        return res;
+    }
+
     //根据项目id得到审核状态
     @GetMapping("/getStatus")
     public Map<String, Object> findStatusById(@RequestParam int projectId) {

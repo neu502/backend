@@ -17,6 +17,11 @@ public class ProjectBiz {
         return mapper.selectProjectById(projectId);
     }
 
+    //获取所有项目
+    public List<Project> selectProjects() {
+        return this.mapper.getProjects();
+    }
+
     public String selectStatusById(int projectId) {
         String status = mapper.selectStatusById(projectId);
         return status;
