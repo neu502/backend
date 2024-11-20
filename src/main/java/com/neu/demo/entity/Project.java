@@ -7,6 +7,8 @@ public class Project {
     String ddl;
     String company;
     String status;
+    String auditStatus;
+    String auditSuggest;
     int step;
     double ufp_num;
     double dfp_num;
@@ -16,6 +18,22 @@ public class Project {
     int eq_num;
     int ilf_num;
     int elf_num;
+
+    public String getAuditStatus() {
+        return auditStatus;
+    }
+
+    public void setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+    }
+
+    public String getAuditSuggest() {
+        return auditSuggest;
+    }
+
+    public void setAuditSuggest(String auditSuggest) {
+        this.auditSuggest = auditSuggest;
+    }
 
     public Project() {
     }
