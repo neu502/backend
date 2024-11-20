@@ -17,7 +17,7 @@ public class ProjectController {
 
     //根据项目id得到项目所有信息
     @GetMapping("/getall")
-    public Map<String, Object> findProjectById(@RequestParam int projectId) {
+    public Map<String, Object> findProjectById(@RequestParam String projectId) {
         Map<String, Object> result = new HashMap<>();
         Project project = biz.selectProjectById(projectId);
         if (project != null) {
@@ -39,6 +39,28 @@ public class ProjectController {
         res.put("msg","信息查询成功");
         res.put("project",project);
         return res;
+    }
+    @RequestMapping("/findAllProject")
+    public Map findAllProject(){
+        System.out.println("查找开始");
+        List<Project> list = this.biz.findAllProject();
+        System.out.println("查找成功");
+        Map res = new HashMap();
+        res.put("isOk", true);
+        res.put("msg", "查询成功");
+        res.put("projects", list);
+        return res;
+    }
+    @RequestMapping("/auditProject")
+    public Map auditProject(String project_id,String auditStatus,String auditSuggest){
+        Project project = new Project();
+        project.setProject_id(project_id);
+        project.setAuditStatus(auditStatus);
+        project.setAuditSuggest(auditSuggest);
+        this.biz.auditProject(project);
+        Map res = new HashMap();
+        res.put("isOk",true);
+        return  res;
     }
 
 }

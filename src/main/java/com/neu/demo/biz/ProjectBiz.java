@@ -11,7 +11,7 @@ public class ProjectBiz {
     @Autowired
     private ProjectMapper mapper;
 
-    public Project selectProjectById(int projectId) {
+    public Project selectProjectById(String projectId) {
         return mapper.selectProjectById(projectId);
 
 
@@ -21,4 +21,8 @@ public class ProjectBiz {
         return this.mapper.selectProjectByProjectName(projectName);
     }
 
+    public List<Project>findAllProject(){
+        return this.mapper.selectAllProject();
+    }
+    public void auditProject(Project project){ this.mapper.auditProject(project);}
 }
