@@ -5,15 +5,6 @@ public class Project {
     String project_name;
     String project_info;
     String begin;
-
-    public String getBegin() {
-        return begin;
-    }
-
-    public void setBegin(String begin) {
-        this.begin = begin;
-    }
-
     String ddl;
     String company;
     String status;
@@ -29,6 +20,13 @@ public class Project {
     int ilf_num;
     int elf_num;
 
+    public String getBegin() {
+        return begin;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
+    }
     public String getAuditStatus() {
         return auditStatus;
     }
