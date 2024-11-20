@@ -4,6 +4,16 @@ public class Project {
     String project_id;
     String project_name;
     String project_info;
+    String begin;
+
+    public String getBegin() {
+        return begin;
+    }
+
+    public void setBegin(String begin) {
+        this.begin = begin;
+    }
+
     String ddl;
     String company;
     String status;
