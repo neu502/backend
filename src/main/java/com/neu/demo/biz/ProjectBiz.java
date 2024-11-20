@@ -24,5 +24,5 @@ public class ProjectBiz {
     public List<Project>findAllProject(){
         return this.mapper.selectAllProject();
     }
-    public void auditProject(Project project){ this.mapper.auditProject(project);}
+    public boolean auditProject(Project project){return this.mapper.auditProject(project)>0;}
 }
