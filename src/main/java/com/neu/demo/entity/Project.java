@@ -8,12 +8,10 @@ public class Project {
     String ddl;
     String company;
     String status;
-<<<<<<< HEAD
-    String begin;
-=======
+
     String auditStatus;
     String auditSuggest;
->>>>>>> 4141cb604101d3c7e96a66696b9c9e10931d0c48
+
     int step;
     double ufp_num;
     double dfp_num;
@@ -24,13 +22,6 @@ public class Project {
     int ilf_num;
     int elf_num;
 
-    public String getBegin() {
-        return begin;
-    }
-
-    public void setBegin(String begin) {
-        this.begin = begin;
-    }
     public String getAuditStatus() {
         return auditStatus;
     }
